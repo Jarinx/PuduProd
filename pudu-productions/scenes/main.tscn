@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvtkul1uujjob"]
+
+[ext_resource type="Texture2D" uid="uid://cb1440qvar6q1" path="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheet.png" id="1_5b6yk"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SpriteSheet" type="Sprite2D" parent="."]
+position = Vector2(192, 213)
+texture = ExtResource("1_5b6yk")
