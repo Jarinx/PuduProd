@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://p3cpb5i0rgwo"]
+
+[ext_resource type="Texture2D" uid="uid://bcvbuwsahm4g3" path="res://assets/32x32/32x32 textures (32).png" id="1_0iddw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wn4t"]
+
+[node name="Onda" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8wn4t")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(1.4129, 1.39713)
+energy = 2.52
+texture = ExtResource("1_0iddw")
