@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvtkul1uujjob"]
 
-[ext_resource type="PackedScene" uid="uid://xechet8fald5" path="res://scenes/bright_room.tscn" id="1_05pd1"]
-[ext_resource type="PackedScene" uid="uid://80skvd446sdo" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
+[ext_resource type="PackedScene" uid="uid://bvi414godpxcy" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="PackedScene" uid="uid://by1wdc2h7xltv" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
 [ext_resource type="PackedScene" uid="uid://udsym37bae55" path="res://scenes/player.tscn" id="3_4tk5q"]
 
 [node name="Main" type="Node2D"]
-
-[node name="BrightRoom" parent="." instance=ExtResource("1_05pd1")]
-position = Vector2(239, 174)
 
 [node name="DarkRoom" parent="." instance=ExtResource("2_gd2gu")]
 light_mask = 3
 visibility_layer = 3
 position = Vector2(15, 110)
+
+[node name="BrightRoom" parent="." instance=ExtResource("1_05pd1")]
+position = Vector2(239, 174)
 
 [node name="Player" parent="." instance=ExtResource("3_4tk5q")]
 position = Vector2(67, 116)

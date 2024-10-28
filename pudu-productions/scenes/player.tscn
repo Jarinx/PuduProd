@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://udsym37bae55"]
+[gd_scene load_steps=45 format=3 uid="uid://udsym37bae55"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_2cmfb"]
 [ext_resource type="Texture2D" uid="uid://cb1440qvar6q1" path="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheet.png" id="2_tdu73"]
@@ -385,6 +385,9 @@ animation = &"idle_up_left"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m6ds7"]
 animation = &"walk_right_up"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cc8cb"]
+animation = &"walk_up_left"
+
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_j33jl"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_yeito")
 blend_point_0/pos = Vector2(-1, 0)
@@ -402,6 +405,8 @@ blend_point_6/node = SubResource("AnimationNodeAnimation_10fxh")
 blend_point_6/pos = Vector2(-1, -1.1)
 blend_point_7/node = SubResource("AnimationNodeAnimation_m6ds7")
 blend_point_7/pos = Vector2(1, -1)
+blend_point_8/node = SubResource("AnimationNodeAnimation_cc8cb")
+blend_point_8/pos = Vector2(-1, -1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2luh3"]
