@@ -418,7 +418,7 @@ states/Walk/position = Vector2(672, 125)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_2luh3"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_svqdr")]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_2cmfb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -441,7 +441,10 @@ parameters/Idle/blend_position = Vector2(-0.0047695, 0.99115)
 parameters/Walk/blend_position = Vector2(0.825119, 0.495575)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-energy = 4.0
+light_mask = 3
+visibility_layer = 3
+energy = 5.5
+blend_mode = 2
 texture = ExtResource("3_dbl1f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
