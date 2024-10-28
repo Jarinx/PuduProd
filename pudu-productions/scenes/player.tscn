@@ -1,7 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://udsym37bae55"]
+[gd_scene load_steps=44 format=3 uid="uid://udsym37bae55"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_2cmfb"]
 [ext_resource type="Texture2D" uid="uid://cb1440qvar6q1" path="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheet.png" id="2_tdu73"]
+[ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="3_dbl1f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gq62y"]
 radius = 7.28011
@@ -421,11 +422,9 @@ collision_mask = 2
 script = ExtResource("1_2cmfb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(226, 116)
 shape = SubResource("CircleShape2D_gq62y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(225, 99)
 texture = ExtResource("2_tdu73")
 hframes = 9
 vframes = 9
@@ -440,3 +439,9 @@ tree_root = SubResource("AnimationNodeStateMachine_2cc54")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.0047695, 0.99115)
 parameters/Walk/blend_position = Vector2(0.825119, 0.495575)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 4.0
+texture = ExtResource("3_dbl1f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
