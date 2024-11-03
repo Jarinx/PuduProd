@@ -466,3 +466,10 @@ one_shot = true
 
 [node name="Marker2D" type="Marker2D" parent="Node2D"]
 position = Vector2(59, -1)
+
+[node name="Onda" type="PointLight2D" parent="Node2D"]
+position = Vector2(59, -1)
+scale = Vector2(1.28125, 1.20313)
+enabled = false
+energy = 2.52
+texture = ExtResource("3_dbl1f")

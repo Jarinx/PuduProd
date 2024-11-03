@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://capqu08827lmt"]
+[gd_scene load_steps=4 format=3 uid="uid://capqu08827lmt"]
 
+[ext_resource type="Script" path="res://Components/hitbox.gd" id="1_g8bbg"]
 [ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="1_ljmkf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wn4t"]
 
 [node name="Onda" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_g8bbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8wn4t")

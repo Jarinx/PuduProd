@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	input_vector.x= Input.get_axis("left","right")
 	input_vector.y = Input.get_axis("up","down")
 	input_vector= input_vector.normalized()
-	print(input_vector)
+	
 	
 	if input_vector:
 		velocity= input_vector * speed

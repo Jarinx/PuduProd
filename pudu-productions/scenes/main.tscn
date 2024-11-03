@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvtkul1uujjob"]
+[gd_scene load_steps=6 format=3 uid="uid://bvtkul1uujjob"]
 
-[ext_resource type="PackedScene" path="res://scenes/bright_room.tscn" id="1_05pd1"]
-[ext_resource type="PackedScene" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
+[ext_resource type="PackedScene" uid="uid://bwylx7ak4gply" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="PackedScene" uid="uid://bowpuy0pq67dx" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
 [ext_resource type="PackedScene" uid="uid://udsym37bae55" path="res://scenes/player.tscn" id="3_4tk5q"]
+[ext_resource type="PackedScene" uid="uid://b05s8v0egr6ch" path="res://ui/pause.tscn" id="4_viqxd"]
+[ext_resource type="PackedScene" uid="uid://cllht385a1yxl" path="res://scenes/enemy.tscn" id="5_ofb2j"]
 
 [node name="Main" type="Node2D"]
 
@@ -16,3 +18,8 @@ position = Vector2(239, 174)
 
 [node name="Player" parent="." instance=ExtResource("3_4tk5q")]
 position = Vector2(67, 116)
+
+[node name="Pause" parent="." instance=ExtResource("4_viqxd")]
+
+[node name="Enemy" parent="." instance=ExtResource("5_ofb2j")]
+position = Vector2(566, 179)
