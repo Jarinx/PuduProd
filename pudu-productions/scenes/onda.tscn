@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://capqu08827lmt"]
+
+[ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="1_ljmkf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8wn4t"]
+
+[node name="Onda" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8wn4t")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(1.4129, 1.39713)
+energy = 2.52
+texture = ExtResource("1_ljmkf")

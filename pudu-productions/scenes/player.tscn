@@ -453,3 +453,16 @@ blend_mode = 2
 texture = ExtResource("3_dbl1f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="OndaCooldown" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="OndaTime" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Node2D"]
+position = Vector2(59, -1)

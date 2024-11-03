@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvtkul1uujjob"]
 
-[ext_resource type="PackedScene" uid="uid://bvi414godpxcy" path="res://scenes/bright_room.tscn" id="1_05pd1"]
-[ext_resource type="PackedScene" uid="uid://by1wdc2h7xltv" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
+[ext_resource type="PackedScene" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="PackedScene" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
 [ext_resource type="PackedScene" uid="uid://udsym37bae55" path="res://scenes/player.tscn" id="3_4tk5q"]
 
 [node name="Main" type="Node2D"]
