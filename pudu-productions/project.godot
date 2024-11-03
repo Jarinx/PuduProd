@@ -49,5 +49,6 @@ onda={
 }
 
 [rendering]
+quality/driver/driver_name="Compatibility"
 
 textures/canvas_textures/default_texture_filter=0
