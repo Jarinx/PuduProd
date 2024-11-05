@@ -469,10 +469,10 @@ position = Vector2(-1.7579, 0.48436)
 position = Vector2(0, -17)
 
 [node name="OndaCooldown" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 one_shot = true
 
 [node name="OndaTime" type="Timer" parent="."]
 process_callback = 0
-wait_time = 2.0
+wait_time = 4.0
 one_shot = true
