@@ -55,7 +55,5 @@ func lanzar ():
 	onda_cooldown.start()
 	onda_time.start()
 	
-	
-	
-	
+
 	
