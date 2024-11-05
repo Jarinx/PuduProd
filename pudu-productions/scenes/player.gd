@@ -4,6 +4,7 @@ const onda = preload('res://scenes/onda.tscn')
 var speed= 200
 @onready var onda_cooldown: Timer = $OndaCooldown
 @onready var onda_time: Timer = $OndaTime
+@onready var marker_position: Marker2D = $Node2D/Marker2D
 
 func _physics_process(delta: float) -> void:
 	var input_vector  = Vector2.ZERO
@@ -32,13 +33,23 @@ func _process(delta: float) -> void:
 
 func lanzar ():
 	
-	if onda_cooldown.time_left:
+	if onda_cooldown.time_left > 0:
 		return
 	var wave = onda.instantiate()
 	get_parent().add_child(wave)
-	wave.position = $Node2D/Marker2D.global_position
+	wave.position = global_position
+	# Calcula la dirección exacta entre el marcador y el mouse
+	var direction_to_mouse = (get_global_mouse_position() - wave.position).normalized()
+	
+	# Ajusta la rotación de la onda y agrega un desfase de -PI/2 para que apunte en la dirección correcta
+	wave.rotation = direction_to_mouse.angle() 
+	# Aquí puedes ajustar la rotación para que la dirección del cono empiece correctamente desde el jugador
+	wave.rotation += PI / 2  # Ajusta esto si es necesario, dependiendo de la orientación de tu textura
+	
+	
 	onda_cooldown.start()
 	onda_time.start()
+	
 	
 	
 	

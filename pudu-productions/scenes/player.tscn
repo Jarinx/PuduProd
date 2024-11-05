@@ -429,6 +429,7 @@ script = ExtResource("1_2cmfb")
 metadata/_edit_horizontal_guides_ = [2.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-2.7579, 25.4844)
 shape = SubResource("CircleShape2D_gq62y")
 
@@ -465,7 +466,7 @@ texture_scale = 0.75
 position = Vector2(-1.7579, 0.48436)
 
 [node name="Marker2D" type="Marker2D" parent="Node2D"]
-position = Vector2(99.7579, 0.51564)
+position = Vector2(0, -17)
 
 [node name="OndaCooldown" type="Timer" parent="."]
 wait_time = 2.0
