@@ -46,6 +46,11 @@ func lanzar ():
 	# Aquí puedes ajustar la rotación para que la dirección del cono empiece correctamente desde el jugador
 	wave.rotation += PI / 2  # Ajusta esto si es necesario, dependiendo de la orientación de tu textura
 	
+	# Inicia la disipación
+	wave.is_dissipating = true  # Cambia el estado para comenzar a disiparse
+	wave.timer = 0  # Reinicia el temporizador
+	wave.original_scale = Vector2(1, 1)  # Escala original
+	wave.target_scale = Vector2(0, 0)  # Escala final (disiparse completamente)
 	
 	onda_cooldown.start()
 	onda_time.start()
@@ -53,8 +58,4 @@ func lanzar ():
 	
 	
 	
-	
-	
-	
-
 	
