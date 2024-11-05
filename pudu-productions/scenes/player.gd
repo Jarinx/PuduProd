@@ -1,16 +1,21 @@
+class_name Player
 extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationTree
 const onda = preload('res://scenes/onda.tscn')
 var speed= 200
 @onready var onda_cooldown: Timer = $OndaCooldown
 @onready var onda_time: Timer = $OndaTime
+var wave: Node = null
+
+func _ready() -> void:
+	#onda_time.timeout.connect(_on_onda_timeout())
+	onda_time.timeout.connect(Callable(self, "_on_onda_timeout"))
 
 func _physics_process(delta: float) -> void:
 	var input_vector  = Vector2.ZERO
 	input_vector.x= Input.get_axis("left","right")
 	input_vector.y = Input.get_axis("up","down")
 	input_vector= input_vector.normalized()
-	
 	
 	if input_vector:
 		velocity= input_vector * speed
@@ -19,8 +24,6 @@ func _physics_process(delta: float) -> void:
 		$AnimationTree.get("parameters/playback").travel("Walk")
 		move_and_slide()
 	
-		
-		
 	else:
 		velocity= input_vector
 		$AnimationTree.get("parameters/playback").travel("Idle")
@@ -30,20 +33,16 @@ func _process(delta: float) -> void:
 		lanzar()
 	$Node2D.look_at(get_global_mouse_position())
 
-func lanzar ():
-	
+func lanzar():
 	if onda_cooldown.time_left:
 		return
-	var wave = onda.instantiate()
+	wave = onda.instantiate()
 	get_parent().add_child(wave)
 	wave.position = $Node2D/Marker2D.global_position
 	onda_cooldown.start()
 	onda_time.start()
-	
-	
-	
-	
-	
-	
 
-	
+func _on_onda_timeout():
+	if wave != null:
+		wave.queue_free()
+		wave = null
