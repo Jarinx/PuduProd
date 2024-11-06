@@ -47,5 +47,6 @@ func _on_onda_timeout():
 		wave.queue_free()
 		wave = null
 func take_damage():
-	self.queue_free()
 	get_parent().get_node("")
+	self.queue_free()
+	get_tree().change_scene_to_file("res://ui/game_over.tscn")

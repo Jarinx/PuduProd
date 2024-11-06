@@ -7,13 +7,13 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.hide()
+	#self.hide()
 	retry.pressed.connect(on_retry_pressed)
 	quit.pressed.connect(get_tree().quit)
 	menu.pressed.connect(on_menu_pressed)
 func on_retry_pressed():
 	get_tree().paused= false
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 func on_menu_pressed():
 	get_tree().paused= false
 	get_tree().change_scene_to_file("res://ui/mainMenu.tscn")
