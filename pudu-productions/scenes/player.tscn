@@ -1,8 +1,9 @@
-[gd_scene load_steps=45 format=3 uid="uid://udsym37bae55"]
+[gd_scene load_steps=47 format=3 uid="uid://udsym37bae55"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_2cmfb"]
 [ext_resource type="Texture2D" uid="uid://cb1440qvar6q1" path="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheet.png" id="2_tdu73"]
 [ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="3_dbl1f"]
+[ext_resource type="Script" path="res://Components/hurtbox.gd" id="4_gfn1v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gq62y"]
 radius = 7.28011
@@ -422,6 +423,9 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_j33jl")
 states/Walk/position = Vector2(672, 125)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_2luh3"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_svqdr")]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_byecg"]
+height = 38.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1_2cmfb")
@@ -473,3 +477,12 @@ scale = Vector2(1.28125, 1.20313)
 enabled = false
 energy = 2.52
 texture = ExtResource("3_dbl1f")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("4_gfn1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_byecg")

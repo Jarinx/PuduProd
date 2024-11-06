@@ -46,3 +46,6 @@ func _on_onda_timeout():
 	if wave != null:
 		wave.queue_free()
 		wave = null
+func take_damage():
+	self.queue_free()
+	get_parent().get_node("")

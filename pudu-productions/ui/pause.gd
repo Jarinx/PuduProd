@@ -1,9 +1,10 @@
 extends CanvasLayer
+@onready var resume: Button = $ColorRect/VBoxContainer/Resume
+@onready var restart: Button = $ColorRect/VBoxContainer/Restart
+@onready var quit: Button = $ColorRect/VBoxContainer/Quit
 
-@onready var resume: Button = $VBoxContainer/Resume
-@onready var menu: Button = $VBoxContainer/Menu
-@onready var quit: Button = $VBoxContainer/Quit
-@onready var restart: Button = $VBoxContainer/Restart
+@onready var menu: Button = $ColorRect/VBoxContainer/Menu
+
 
 
 # Called when the node enters the scene tree for the first time.

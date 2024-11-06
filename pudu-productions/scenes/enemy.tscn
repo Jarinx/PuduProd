@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cllht385a1yxl"]
+[gd_scene load_steps=8 format=3 uid="uid://d0f1vwvqkif2b"]
 
 [ext_resource type="Texture2D" uid="uid://1orvxydh8iwg" path="res://icon.svg" id="1_rvsyo"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_tscdc"]
 [ext_resource type="Script" path="res://Components/hurtbox.gd" id="2_nmgc5"]
+[ext_resource type="Script" path="res://Components/hitbox.gd" id="4_06py3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkyik"]
 size = Vector2(92.5, 73)
@@ -10,7 +11,12 @@ size = Vector2(92.5, 73)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ilpe"]
 size = Vector2(58, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2utrq"]
+size = Vector2(52, 49)
+
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_tscdc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,17 +25,26 @@ scale = Vector2(0.40625, 0.359375)
 texture = ExtResource("1_rvsyo")
 
 [node name="Hurtbox" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("2_nmgc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(12.75, 16.5)
+position = Vector2(5, 11)
 shape = SubResource("RectangleShape2D_vkyik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(319, 10)
+position = Vector2(6, 12)
 shape = SubResource("RectangleShape2D_0ilpe")
 
 [node name="FollowTime" type="Timer" parent="."]
 autostart = true
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("4_06py3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(6, 12)
+shape = SubResource("RectangleShape2D_2utrq")
