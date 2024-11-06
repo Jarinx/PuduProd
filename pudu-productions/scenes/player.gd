@@ -33,12 +33,27 @@ func _process(delta: float) -> void:
 		lanzar()
 	$Node2D.look_at(get_global_mouse_position())
 
-func lanzar():
-	if onda_cooldown.time_left:
+func lanzar ():
+	
+	if onda_cooldown.time_left > 0:
 		return
-	wave = onda.instantiate()
+	var wave = onda.instantiate()
 	get_parent().add_child(wave)
-	wave.position = $Node2D/Marker2D.global_position
+	wave.position = global_position
+	# Calcula la dirección exacta entre el marcador y el mouse
+	var direction_to_mouse = (get_global_mouse_position() - wave.position).normalized()
+	
+	# Ajusta la rotación de la onda y agrega un desfase de -PI/2 para que apunte en la dirección correcta
+	wave.rotation = direction_to_mouse.angle() 
+	# Aquí puedes ajustar la rotación para que la dirección del cono empiece correctamente desde el jugador
+	wave.rotation += PI / 2  # Ajusta esto si es necesario, dependiendo de la orientación de tu textura
+	
+	# Inicia la disipación
+	wave.is_dissipating = true  # Cambia el estado para comenzar a disiparse
+	wave.timer = 0  # Reinicia el temporizador
+	wave.original_scale = Vector2(1, 1)  # Escala original
+	wave.target_scale = Vector2(0, 0)  # Escala final (disiparse completamente)
+	
 	onda_cooldown.start()
 	onda_time.start()
 
