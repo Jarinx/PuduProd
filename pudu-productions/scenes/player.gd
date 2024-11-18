@@ -6,10 +6,13 @@ var speed= 200
 @onready var onda_cooldown: Timer = $OndaCooldown
 @onready var onda_time: Timer = $OndaTime
 var wave: Node = null
+@onready var point_light_2d: PointLight2D = $PointLight2D
 
 func _ready() -> void:
 	#onda_time.timeout.connect(_on_onda_timeout())
 	onda_time.timeout.connect(Callable(self, "_on_onda_timeout"))
+	
+	
 
 func _physics_process(delta: float) -> void:
 	var input_vector  = Vector2.ZERO
