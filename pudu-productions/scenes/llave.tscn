@@ -1,15 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://battuubvulm6c"]
+[gd_scene load_steps=9 format=3 uid="uid://battuubvulm6c"]
 
 [ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="1_nqp0o"]
 [ext_resource type="Script" path="res://Components/hurtbox.gd" id="2_lf5p8"]
 [ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="3_16tn4"]
 [ext_resource type="Texture2D" uid="uid://cjp0w8wj1pk1d" path="res://assets/Key Items 16x16/00.png" id="4_4gl6u"]
+[ext_resource type="Script" path="res://scenes/area_2d.gd" id="5_yd5wm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b2qnf"]
 radius = 8.0
 height = 18.6667
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oq0vm"]
+radius = 8.0
+height = 18.6667
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3os3n"]
+radius = 17.3333
+height = 58.6667
 
 [node name="llave" type="CharacterBody2D"]
 position = Vector2(79, 126)
@@ -38,5 +45,16 @@ collision_mask = 8
 script = ExtResource("2_lf5p8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(-100, -166.667)
+position = Vector2(-104, -166.667)
 shape = SubResource("CapsuleShape2D_oq0vm")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_yd5wm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-104, -166.667)
+shape = SubResource("CapsuleShape2D_3os3n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

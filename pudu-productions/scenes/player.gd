@@ -68,3 +68,5 @@ func take_damage():
 	get_parent().get_node("")
 	self.queue_free()
 	get_tree().change_scene_to_file("res://ui/game_over.tscn")
+func Player():
+	pass
