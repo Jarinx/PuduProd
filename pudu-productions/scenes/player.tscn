@@ -457,6 +457,7 @@ blend_mode = 2
 texture = ExtResource("3_dbl1f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="OndaCooldown" type="Timer" parent="."]
 wait_time = 2.0
