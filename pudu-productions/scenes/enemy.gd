@@ -22,5 +22,7 @@ func detection(body):
 	follow_time.start()
 func _on_follow_time_timeout() -> void:
 	player_chase = false  # Deja de seguir al jugador cuando el temporizador se acabe
+func enemy():
+	pass
 	
 	

@@ -74,3 +74,12 @@ func take_damage():
 	
 func Player():
 	pass
+func auto_iluminate(area):
+	print(area.tipo_de_area)
+	print(area)
+	if area.tipo_de_area == "dark":
+		point_light_2d.enabled = true
+	elif area.tipo_de_area =="bright":
+		print(area.tipo_de_area)
+		point_light_2d.enabled = false
+		

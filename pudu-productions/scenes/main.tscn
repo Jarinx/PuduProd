@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bvtkul1uujjob"]
 
-[ext_resource type="PackedScene" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="PackedScene" uid="uid://dnpqbx8rg2kit" path="res://scenes/bright_room.tscn" id="1_05pd1"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ichbc"]
 [ext_resource type="PackedScene" uid="uid://bowpuy0pq67dx" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
 [ext_resource type="PackedScene" uid="uid://udsym37bae55" path="res://scenes/player.tscn" id="3_4tk5q"]
@@ -27,8 +27,6 @@ position = Vector2(239, 174)
 [node name="Player" parent="." instance=ExtResource("3_4tk5q")]
 position = Vector2(574, 243)
 
-[node name="Inventory" parent="Player" instance=ExtResource("9_1xewt")]
-
 [node name="Pause" parent="." instance=ExtResource("4_viqxd")]
 visible = false
 
@@ -54,9 +52,11 @@ shape = SubResource("RectangleShape2D_meg8n")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_bottom = 0.0
-offset_left = -995.0
+offset_left = -1091.0
 offset_top = 6.0
-offset_right = -995.0
+offset_right = -1091.0
 offset_bottom = 6.0
 grow_horizontal = 0
 grow_vertical = 1
+
+[node name="Inventory" parent="." instance=ExtResource("9_1xewt")]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://bowpuy0pq67dx"]
+[gd_scene load_steps=7 format=4 uid="uid://bowpuy0pq67dx"]
 
 [ext_resource type="Texture2D" uid="uid://cigpxyr0ublwa" path="res://assets/Victorian Interior/16x16/16x16-ALL-ASSETS.png" id="1_aal3b"]
+[ext_resource type="Script" path="res://scenes/dark_room.gd" id="1_dlxmh"]
 [ext_resource type="PackedScene" uid="uid://battuubvulm6c" path="res://scenes/llave.tscn" id="2_wyku2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xplf6"]
@@ -394,8 +395,12 @@ texture = ExtResource("1_aal3b")
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_xplf6")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf5yp"]
+size = Vector2(304, 327)
+
 [node name="DarkRoom" type="Node2D"]
 z_as_relative = false
+script = ExtResource("1_dlxmh")
 
 [node name="Background" type="TileMapLayer" parent="."]
 light_mask = 3
@@ -423,3 +428,13 @@ blend_mode = 1
 
 [node name="llave" parent="." instance=ExtResource("2_wyku2")]
 position = Vector2(156, 244)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(137, 47.5)
+shape = SubResource("RectangleShape2D_wf5yp")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
