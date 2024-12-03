@@ -2,12 +2,13 @@ class_name Player
 extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationTree
 const onda = preload('res://scenes/onda.tscn')
-var speed= 200
+var speed= 100
 @onready var onda_cooldown: Timer = $OndaCooldown
 @onready var onda_time: Timer = $OndaTime
 var wave: Node = null
 @onready var point_light_2d: PointLight2D = $PointLight2D
-
+@onready var currentHealth = Global.health
+signal healthChanged
 func _ready() -> void:
 	#onda_time.timeout.connect(_on_onda_timeout())
 	onda_time.timeout.connect(Callable(self, "_on_onda_timeout"))
@@ -65,8 +66,11 @@ func _on_onda_timeout():
 		wave.queue_free()
 		wave = null
 func take_damage():
-	get_parent().get_node("")
-	self.queue_free()
-	get_tree().change_scene_to_file("res://ui/game_over.tscn")
+	Global.health -= 1
+	currentHealth = Global.health
+	if currentHealth == 0:
+		pass
+	healthChanged.emit(currentHealth)
+	
 func Player():
 	pass

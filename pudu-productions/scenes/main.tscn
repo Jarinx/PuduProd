@@ -1,15 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvtkul1uujjob"]
+[gd_scene load_steps=11 format=3 uid="uid://bvtkul1uujjob"]
 
-[ext_resource type="PackedScene" uid="uid://bwylx7ak4gply" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="PackedScene" path="res://scenes/bright_room.tscn" id="1_05pd1"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_ichbc"]
 [ext_resource type="PackedScene" uid="uid://bowpuy0pq67dx" path="res://scenes/dark_room.tscn" id="2_gd2gu"]
 [ext_resource type="PackedScene" uid="uid://udsym37bae55" path="res://scenes/player.tscn" id="3_4tk5q"]
 [ext_resource type="PackedScene" uid="uid://b05s8v0egr6ch" path="res://ui/pause.tscn" id="4_viqxd"]
+[ext_resource type="PackedScene" uid="uid://ewuujbo4fhcv" path="res://scenes/enemy.tscn" id="5_ofb2j"]
 [ext_resource type="PackedScene" uid="uid://da23gav3djc0o" path="res://scenes/checkpoint.tscn" id="6_hy2yl"]
+[ext_resource type="PackedScene" uid="uid://l48psjhia80s" path="res://ui/Hearts_container.tscn" id="7_61w0k"]
+[ext_resource type="PackedScene" uid="uid://cqhmdj8fhc21b" path="res://ui/Inventory.tscn" id="9_1xewt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_meg8n"]
 size = Vector2(108, 24)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_ichbc")
 
 [node name="DarkRoom" parent="." instance=ExtResource("2_gd2gu")]
 light_mask = 3
@@ -22,8 +27,17 @@ position = Vector2(239, 174)
 [node name="Player" parent="." instance=ExtResource("3_4tk5q")]
 position = Vector2(574, 243)
 
+[node name="Inventory" parent="Player" instance=ExtResource("9_1xewt")]
+
 [node name="Pause" parent="." instance=ExtResource("4_viqxd")]
 visible = false
+
+[node name="Enemy" parent="." instance=ExtResource("5_ofb2j")]
+position = Vector2(342, 226)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_ofb2j")]
+position = Vector2(117, 266)
+scale = Vector2(0.7, 0.7)
 
 [node name="Checkpoint" parent="." instance=ExtResource("6_hy2yl")]
 position = Vector2(113, 346)
@@ -33,3 +47,16 @@ gizmo_extents = 35.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
 shape = SubResource("RectangleShape2D_meg8n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hearts_container" parent="CanvasLayer" instance=ExtResource("7_61w0k")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -995.0
+offset_top = 6.0
+offset_right = -995.0
+offset_bottom = 6.0
+grow_horizontal = 0
+grow_vertical = 1

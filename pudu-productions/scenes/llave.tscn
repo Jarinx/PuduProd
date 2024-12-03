@@ -36,7 +36,7 @@ position = Vector2(-104, -166.667)
 texture = ExtResource("4_4gl6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-156, -21.3333)
+position = Vector2(-148, -52)
 shape = SubResource("CapsuleShape2D_b2qnf")
 
 [node name="Hurtbox" type="Area2D" parent="."]

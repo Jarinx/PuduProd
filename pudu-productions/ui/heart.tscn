@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bunovyjds4ha3"]
+
+[ext_resource type="Texture2D" uid="uid://dqqymt5nn1sxv" path="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/Hearts.png" id="1_c31j2"]
+[ext_resource type="Script" path="res://ui/heart.gd" id="1_fpbwp"]
+
+[node name="Heart" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(13, 12)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1139.0
+offset_bottom = -636.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpbwp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 14)
+scale = Vector2(3.03125, 2.71875)
+texture = ExtResource("1_c31j2")
+hframes = 4
+vframes = 5
