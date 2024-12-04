@@ -1,7 +1,12 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://do1k4s2uxf1r2"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://do1k4s2uxf1r2"]
 
+[ext_resource type="Texture2D" uid="uid://dlri23b4u8ktj" path="res://assets/images/frame.png" id="1_18kp4"]
 [ext_resource type="FontFile" uid="uid://cespu3gmo1655" path="res://assets/fonts/Blackcraft.otf" id="1_eqaj6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qprvl"]
+texture = ExtResource("1_18kp4")
 
 [resource]
 default_font = ExtResource("1_eqaj6")
-default_font_size = 50
+default_font_size = 53
+Button/styles/normal = SubResource("StyleBoxTexture_qprvl")

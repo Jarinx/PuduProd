@@ -27,6 +27,7 @@ text = "Game Over"
 [node name="Retry" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Retry"
+expand_icon = true
 
 [node name="Menu" type="Button" parent="VBoxContainer"]
 layout_mode = 2

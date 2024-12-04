@@ -8,10 +8,10 @@ process_mode = 3
 script = ExtResource("1_wyaav")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 250.0
-offset_top = 17.0
-offset_right = 636.0
-offset_bottom = 361.0
+offset_left = 402.0
+offset_top = 114.0
+offset_right = 788.0
+offset_bottom = 458.0
 scale = Vector2(1.09902, 1.06209)
 color = Color(0.0338533, 0.0338533, 0.0338533, 1)
 
