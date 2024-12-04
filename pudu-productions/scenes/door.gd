@@ -1,5 +1,5 @@
 extends TileMapLayer
-@onready var press: Label = $press
+@onready var press: Label = $"../interact/press"
 
 var player_in_area = false
 

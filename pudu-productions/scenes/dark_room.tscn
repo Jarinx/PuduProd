@@ -785,14 +785,18 @@ script = ExtResource("5_eopi6")
 position = Vector2(96, 239.375)
 shape = SubResource("RectangleShape2D_bdbxy")
 
-[node name="press" type="Label" parent="Door"]
-offset_left = 61.0
-offset_top = 259.0
-offset_right = 418.0
-offset_bottom = 320.0
+[node name="interact" type="CanvasLayer" parent="."]
 scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
+
+[node name="press" type="Label" parent="interact"]
+offset_left = 200.0
+offset_top = 1835.0
+offset_right = 650.0
+offset_bottom = 1918.0
+scale = Vector2(2, 2)
 theme = ExtResource("6_dks1s")
-text = "Press E to open"
+text = "Press E to interact"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Door/Area2D" to="Door" method="_on_area_2d_area_entered"]
