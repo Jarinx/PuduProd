@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://b43ei3inldftv"]
+
+[ext_resource type="Script" path="res://ui/credits.gd" id="1_uq4ve"]
+[ext_resource type="Texture2D" uid="uid://fltsy1msqgrg" path="res://assets/images/back.jpg" id="2_nk8yh"]
+[ext_resource type="Theme" uid="uid://do1k4s2uxf1r2" path="res://resources/theme.tres" id="3_5a3oj"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uq4ve")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 1150.0
+offset_bottom = 646.0
+texture = ExtResource("2_nk8yh")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(800, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[font_size={30}][u]Room's assets[/u]: Victorian Interior Asset Pack by nadia.pixel (on itch.io)[/font_size]
+
+[font_size={30}][u]Character[/u]: 8-Direction Top-Down Character Sprites by BossNelNel (on itch.io)[/font_size]"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -96.0
+offset_right = 66.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_5a3oj")
+metadata/_edit_group_ = true
+
+[node name="Back" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Return to Menu"
