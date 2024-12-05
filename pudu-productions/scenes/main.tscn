@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvtkul1uujjob"]
+[gd_scene load_steps=17 format=3 uid="uid://bvtkul1uujjob"]
 
 [ext_resource type="PackedScene" uid="uid://dnpqbx8rg2kit" path="res://scenes/bright_room.tscn" id="1_05pd1"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ichbc"]
@@ -9,9 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://da23gav3djc0o" path="res://scenes/checkpoint.tscn" id="6_hy2yl"]
 [ext_resource type="PackedScene" uid="uid://l48psjhia80s" path="res://ui/Hearts_container.tscn" id="7_61w0k"]
 [ext_resource type="PackedScene" uid="uid://cqhmdj8fhc21b" path="res://ui/Inventory.tscn" id="9_1xewt"]
+[ext_resource type="Script" path="res://scenes/bienvenida.gd" id="10_0ph8g"]
+[ext_resource type="Theme" uid="uid://dqo8nrvchla03" path="res://resources/tuto.tres" id="11_lonl4"]
+[ext_resource type="FontFile" uid="uid://cespu3gmo1655" path="res://assets/fonts/Blackcraft.otf" id="12_513gf"]
+[ext_resource type="Script" path="res://scenes/tuto.gd" id="13_a8gcs"]
+[ext_resource type="Theme" uid="uid://do1k4s2uxf1r2" path="res://resources/theme.tres" id="14_w2t6k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_meg8n"]
 size = Vector2(108, 24)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrovm"]
+font = ExtResource("12_513gf")
+font_size = 30
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ichbc")
@@ -62,3 +71,50 @@ grow_horizontal = 0
 grow_vertical = 1
 
 [node name="Inventory" parent="." instance=ExtResource("9_1xewt")]
+
+[node name="Bienvenida" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("10_0ph8g")
+
+[node name="Label" type="Label" parent="Bienvenida"]
+anchors_preset = -1
+anchor_right = 0.009
+anchor_bottom = 0.018
+offset_left = 255.0
+offset_top = 74.0
+offset_right = 975.632
+offset_bottom = 538.336
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("11_lonl4")
+theme_override_fonts/font = ExtResource("12_513gf")
+text = "Bienvenido a [Nombre_de_Juego]
+En esta sección te enseñaremos a como jugar para
+que estes preparado para los desafios que te esperan"
+label_settings = SubResource("LabelSettings_rrovm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Bienvenida/Label"]
+layout_direction = 1
+layout_mode = 0
+offset_left = 342.0
+offset_top = 414.0
+offset_right = 396.0
+offset_bottom = 464.0
+theme = ExtResource("11_lonl4")
+text = "Ok"
+
+[node name="Tuto" type="CanvasLayer" parent="."]
+script = ExtResource("13_a8gcs")
+
+[node name="texto_tuto" type="Label" parent="Tuto"]
+visible = false
+offset_left = 136.0
+offset_top = 25.0
+offset_right = 794.0
+offset_bottom = 86.0
+theme = ExtResource("14_w2t6k")
+theme_override_font_sizes/font_size = 35
+text = "Presiona WASD para moverte"
+horizontal_alignment = 1
+vertical_alignment = 1

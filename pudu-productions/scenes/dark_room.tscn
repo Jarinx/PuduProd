@@ -773,6 +773,7 @@ position = Vector2(136, 45.5)
 shape = SubResource("RectangleShape2D_wf5yp")
 
 [node name="Door" type="TileMapLayer" parent="."]
+process_mode = 3
 light_mask = 3
 visibility_layer = 3
 tile_map_data = PackedByteArray("AAAFAA8AAAABABEAAAAGAA8AAAABABEAAAA=")
