@@ -69,6 +69,7 @@ func take_damage():
 	Global.health -= 1
 	currentHealth = Global.health
 	if currentHealth == 0:
+		get_tree().change_scene_to_file("res://ui/game_over.tscn")
 		pass
 	healthChanged.emit(currentHealth)
 	
