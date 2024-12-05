@@ -16,8 +16,8 @@ script = ExtResource("1_uq4ve")
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 3.0
-offset_right = 1150.0
-offset_bottom = 646.0
+offset_right = 1275.0
+offset_bottom = 733.0
 texture = ExtResource("2_nk8yh")
 expand_mode = 1
 
