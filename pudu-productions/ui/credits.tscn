@@ -43,19 +43,29 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 bbcode_enabled = true
-text = "[font_size={30}][u]Room's assets[/u]: Victorian Interior Asset Pack by nadia.pixel (on itch.io)[/font_size]
-
-[font_size={30}][u]Character[/u]: 8-Direction Top-Down Character Sprites by BossNelNel (on itch.io)[/font_size]
-
-
-[font_size={30}][u]Developers[/u]: 
+text = "[font_size={30}][u]Developers[/u]: 
 Daniel Ávila
 Esperanza Cares
 Julieta Ayeli
 Pamela Mendoza [/font_size]
 
+[font_size={30}][u]Room's assets[/u]: Victorian Interior Asset Pack 
+by nadia.pixel (on itch.io)[/font_size]
 
-[font_size={30}][u]Music[/u]: Ambient Horror Indie Game Music by Crow Shade (on itch.io)[/font_size]"
+[font_size={30}][u]Character[/u]: 8-Direction Top-Down Character Sprites 
+by BossNelNel (on itch.io)[/font_size]
+
+[font_size={30}][u]Music[/u]: Ambient Horror Indie Game Music 
+by Crow Shade (on itch.io)[/font_size]
+
+[font_size={30}][u]Key model[/u]: Key Items 16x16 
+by @pixelahead (on Twitter/X.com)[/font_size]
+
+[font_size={30}][u]Menu and credits background[/u]: Game Castle Horror Scene Illustration Background
+from ©️Pngtree (on pngtree.com)[/font_size]
+
+[font_size={30}][u]Font[/u]: Blackcraft
+from © 2023 GGBotNet (on ggbot.net)[/font_size]"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
