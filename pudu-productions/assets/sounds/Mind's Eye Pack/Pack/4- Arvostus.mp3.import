@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t8mmvb5ctdqx"
+path="res://.godot/imported/4- Arvostus.mp3-38f1e4b53b325e100d774d6734716e7b.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Pack/Pack/4- Arvostus.mp3"
+dest_files=["res://.godot/imported/4- Arvostus.mp3-38f1e4b53b325e100d774d6734716e7b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

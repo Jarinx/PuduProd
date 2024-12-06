@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwvypcuf2s06i"
+path="res://.godot/imported/11- Feet of Air.mp3-df1266026b34d10672e7b1391b840aab.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Pack/Pack/11- Feet of Air.mp3"
+dest_files=["res://.godot/imported/11- Feet of Air.mp3-df1266026b34d10672e7b1391b840aab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

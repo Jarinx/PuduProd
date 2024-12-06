@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b43ei3inldftv"]
+[gd_scene load_steps=6 format=3 uid="uid://b43ei3inldftv"]
 
 [ext_resource type="Script" path="res://ui/credits.gd" id="1_uq4ve"]
 [ext_resource type="Texture2D" uid="uid://fltsy1msqgrg" path="res://assets/images/back.jpg" id="2_nk8yh"]
 [ext_resource type="Theme" uid="uid://do1k4s2uxf1r2" path="res://resources/theme.tres" id="3_5a3oj"]
+[ext_resource type="AudioStream" uid="uid://cme56luutui5n" path="res://assets/sounds/Mind's Eye Pack/615529__crash_358__sci-fi-ui-button-sound-008.wav" id="4_0gksn"]
+[ext_resource type="AudioStream" uid="uid://l7oggjfq7i4u" path="res://assets/sounds/Mind's Eye Pack/Pack/8- Quiet.mp3" id="4_6gie5"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -43,7 +45,17 @@ size_flags_vertical = 4
 bbcode_enabled = true
 text = "[font_size={30}][u]Room's assets[/u]: Victorian Interior Asset Pack by nadia.pixel (on itch.io)[/font_size]
 
-[font_size={30}][u]Character[/u]: 8-Direction Top-Down Character Sprites by BossNelNel (on itch.io)[/font_size]"
+[font_size={30}][u]Character[/u]: 8-Direction Top-Down Character Sprites by BossNelNel (on itch.io)[/font_size]
+
+
+[font_size={30}][u]Developers[/u]: 
+Daniel Ávila
+Esperanza Cares
+Julieta Ayeli
+Pamela Mendoza [/font_size]
+
+
+[font_size={30}][u]Music[/u]: Ambient Horror Indie Game Music by Crow Shade (on itch.io)[/font_size]"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -52,9 +64,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -96.0
-offset_right = 66.0
+offset_left = -179.0
+offset_top = -126.0
+offset_right = 191.0
 offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -65,3 +77,10 @@ metadata/_edit_group_ = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Return to Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer2/Back"]
+stream = ExtResource("4_0gksn")
+volume_db = 8.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6gie5")

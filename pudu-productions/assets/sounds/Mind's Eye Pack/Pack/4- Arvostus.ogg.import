@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://l4fsy08x12h3"
+path="res://.godot/imported/4- Arvostus.ogg-1ba71e7a6859038b730f1f1506dadf2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Pack/Pack/4- Arvostus.ogg"
+dest_files=["res://.godot/imported/4- Arvostus.ogg-1ba71e7a6859038b730f1f1506dadf2e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

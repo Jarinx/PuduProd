@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdq6iu8b56lyf"
+path="res://.godot/imported/3 Something's wrong Out.wav-d247fb9f14a1bed4a3319bfcbca7959e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Loops v1/3 Something's wrong/3 Something's wrong Out.wav"
+dest_files=["res://.godot/imported/3 Something's wrong Out.wav-d247fb9f14a1bed4a3319bfcbca7959e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
