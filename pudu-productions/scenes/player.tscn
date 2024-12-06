@@ -284,6 +284,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_tu2qn"]
 resource_name = "walk_up_left"
 length = 0.8
+loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -432,6 +433,7 @@ shape = SubResource("CircleShape2D_gq62y")
 texture = ExtResource("2_tdu73")
 hframes = 9
 vframes = 9
+frame = 51
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
