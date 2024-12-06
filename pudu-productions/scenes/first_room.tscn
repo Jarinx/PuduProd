@@ -320,7 +320,7 @@ texture = ExtResource("1_j74vm")
 [sub_resource type="TileSet" id="TileSet_nipsx"]
 sources/2 = SubResource("TileSetAtlasSource_3wwox")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ed5vs"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlkwu"]
 texture = ExtResource("1_j74vm")
 2:0/0 = 0
 3:0/0 = 0
@@ -636,7 +636,7 @@ texture = ExtResource("1_j74vm")
 20:22/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_j7itm"]
-sources/0 = SubResource("TileSetAtlasSource_ed5vs")
+sources/0 = SubResource("TileSetAtlasSource_xlkwu")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eofgw"]
 size = Vector2(208, 287.5)

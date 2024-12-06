@@ -320,7 +320,7 @@ texture = ExtResource("1_ditcy")
 [sub_resource type="TileSet" id="TileSet_y2b4x"]
 sources/0 = SubResource("TileSetAtlasSource_tqxak")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfnuf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fbrh"]
 texture = ExtResource("1_ditcy")
 2:0/0 = 0
 3:0/0 = 0
@@ -636,7 +636,7 @@ texture = ExtResource("1_ditcy")
 20:22/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3t44q"]
-sources/0 = SubResource("TileSetAtlasSource_wfnuf")
+sources/0 = SubResource("TileSetAtlasSource_2fbrh")
 
 [node name="SecondLevelB" type="Node2D"]
 
