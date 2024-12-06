@@ -2,20 +2,19 @@ extends TileMapLayer
 @onready var press: Label = $"../interact/press"
 
 var player_in_area = false
+var key_n
 
-	
+		
 
 func _process(delta: float) -> void:
 	if player_in_area:
 		press.visible= true
-		
 		var inventory = self.get_parent().get_parent().get_node("Inventory")
-		print(inventory.slots)
 		if Input.is_action_just_pressed("grab"):
 			if inventory.slots == []:
 				press.text = "You need the key"
 			else:
-				inventory.use_item()
+				inventory.use_normal_key()
 				self.queue_free()
 				press.visible=false
 		

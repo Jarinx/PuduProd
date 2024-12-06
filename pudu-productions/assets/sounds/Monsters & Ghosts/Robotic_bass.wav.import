@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bbwrwn5xnrqjl"
+path="res://.godot/imported/Robotic_bass.wav-e466eea90d4453244499621a449b011f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Monsters & Ghosts/Robotic_bass.wav"
+dest_files=["res://.godot/imported/Robotic_bass.wav-e466eea90d4453244499621a449b011f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

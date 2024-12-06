@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://8j26w8smh112"]
+
+[ext_resource type="Script" path="res://scenes/llave_2.gd" id="1_c5d0v"]
+[ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="2_wp87i"]
+[ext_resource type="Texture2D" uid="uid://b2o3gxcw4l6l1" path="res://assets/Key Items 16x16/02.png" id="3_dooke"]
+[ext_resource type="Script" path="res://Components/hurtbox.gd" id="4_jnuh1"]
+[ext_resource type="Script" path="res://scenes/area_2d.gd" id="5_q5hsm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b2qnf"]
+radius = 8.0
+height = 18.6667
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oq0vm"]
+radius = 8.0
+height = 18.6667
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3os3n"]
+radius = 17.3333
+height = 58.6667
+
+[node name="llave" type="CharacterBody2D"]
+position = Vector2(79, 126)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_c5d0v")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-101.333, -165.333)
+scale = Vector2(0.629275, 0.641706)
+enabled = false
+energy = 8.55
+texture = ExtResource("2_wp87i")
+texture_scale = 0.53
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-104, -166.667)
+texture = ExtResource("3_dooke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-148, -52)
+shape = SubResource("CapsuleShape2D_b2qnf")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("4_jnuh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-104, -166.667)
+shape = SubResource("CapsuleShape2D_oq0vm")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_q5hsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-104, -166.667)
+shape = SubResource("CapsuleShape2D_3os3n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

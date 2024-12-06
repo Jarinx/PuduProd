@@ -2,6 +2,9 @@ extends Control
 @onready var start: Button = $TextureRect/VBoxContainer/Start
 @onready var quit: Button = $TextureRect/VBoxContainer/Quit
 @onready var credits: Button = $TextureRect/VBoxContainer/Credits
+@onready var audio_stream_player_2d_1: AudioStreamPlayer2D = $TextureRect/VBoxContainer/Start/AudioStreamPlayer2D
+@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $TextureRect/VBoxContainer/Start/AudioStreamPlayer2D
+@onready var audio_stream_player_2d_3: AudioStreamPlayer2D = $TextureRect/VBoxContainer/Quit/AudioStreamPlayer2D
 
 
 
@@ -12,15 +15,17 @@ func _ready() -> void:
 	quit.pressed.connect(_on_quit_pressed)
 	$AudioStreamPlayer2D.play()
 func _on_start_pressed () -> void:
+	audio_stream_player_2d_1.play()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
-	$AudioStreamPlayer2D.play()
+
 
 func _on_credits_pressed () -> void:
+	audio_stream_player_2d_2.play()
 	get_tree().change_scene_to_file("res://ui/credits.tscn")
-	$AudioStreamPlayer2D.play()
 func _on_quit_pressed () -> void:
+	audio_stream_player_2d_3.play()
 	get_tree().quit()
-	$AudioStreamPlayer2D.play()
+	
 	
 
 

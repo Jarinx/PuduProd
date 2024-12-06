@@ -3,6 +3,7 @@ extends "res://scenes/item.gd"
 @onready var point_light_2d: PointLight2D = $PointLight2D
 var player_in_area= false
 var iluminado = false
+var exit = false
 
 func _ready():
 	item_texture = preload("res://assets/Key Items 16x16/00.png")
@@ -18,9 +19,9 @@ func _process(delta: float) -> void:
 			var cloned_item = self.duplicate()
 			cloned_item.item_texture = self.item_texture
 			Global.add_item_to_inventory(cloned_item)
-			print(self.get_parent().get_parent().get_node("Player").get_node("Inventory"))
 			var inventory = self.get_parent().get_parent().get_node("Inventory")
 			if inventory:
+				
 				inventory.update_ui()
 			else:
 				print("No hay inventario")

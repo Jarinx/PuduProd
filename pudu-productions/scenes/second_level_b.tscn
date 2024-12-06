@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://bqo71dwclk0al"]
 
 [ext_resource type="Texture2D" uid="uid://cigpxyr0ublwa" path="res://assets/Victorian Interior/16x16/16x16-ALL-ASSETS.png" id="1_ditcy"]
-[ext_resource type="PackedScene" uid="uid://battuubvulm6c" path="res://scenes/llave.tscn" id="2_h2ebs"]
+[ext_resource type="PackedScene" uid="uid://8j26w8smh112" path="res://scenes/llave2.tscn" id="2_u17cy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqxak"]
 texture = ExtResource("1_ditcy")
@@ -971,5 +971,5 @@ tile_set = SubResource("TileSet_3t44q")
 tile_map_data = PackedByteArray("AAAkAAEAAAARAAMAAAAkAAIAAAARAAQAAAAmAAAAAAAQAAIAAAAmAAEAAAAQAAMAAAAmAAIAAAAQAAQAAAAcAAEAAAAEAAAAAAAcAAIAAAAEAAEAAAAdAAEAAAAFAAAAAAAdAAIAAAAFAAEAAAAPAP//AAARAAMAAAAPAAAAAAARAAQAAAAhAPn/AAARAAMAAAAhAPr/AAARAAQAAAAUAAQAAAARAAMAAAAUAAUAAAARAAQAAAARAPn/AAARAAMAAAARAPr/AAARAAQAAAAUAPn/AAACAAIAAAAUAPr/AAACAAMAAAAUAPv/AAACAAQAAAAOAPn/AAAQAAIAAAAOAPr/AAAQAAMAAAAOAPv/AAAQAAQAAAA=")
 tile_set = SubResource("TileSet_tmgc2")
 
-[node name="llave" parent="." instance=ExtResource("2_h2ebs")]
-position = Vector2(294, 44)
+[node name="llave" parent="." instance=ExtResource("2_u17cy")]
+position = Vector2(293, 46)

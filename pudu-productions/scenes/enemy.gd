@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var follow_time: Timer = $FollowTime
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 var player_chase = false
@@ -17,6 +18,7 @@ func _physics_process(_delta: float) -> void:
 	
 func detection(body):
 	print("wow")
+	audio_stream_player_2d.play()
 	player = body
 	player_chase = true
 	follow_time.start()

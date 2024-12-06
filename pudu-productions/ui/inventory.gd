@@ -18,6 +18,18 @@ func update_ui():
 
 			print(slots[i].item_texture)
 			slot_images[i].texture = slots[i].item_texture
+func use_normal_key():
+	for i in range(len(slots)):
+		if slots[i] != null:
+			if slots[i].exit ==false:
+				slots[i] = null
+				slot_images[i].texture = null
+				update_ui()
+				break
+			else:
+				pass
+			
+	pass
 func use_item():
 	for i in range(len(slots)):
 		if slots[i] != null:

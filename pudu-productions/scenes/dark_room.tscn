@@ -401,7 +401,7 @@ sources/0 = SubResource("TileSetAtlasSource_xplf6")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wf5yp"]
 size = Vector2(302, 323)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_33615"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82txv"]
 texture = ExtResource("1_aal3b")
 2:0/0 = 0
 3:0/0 = 0
@@ -718,14 +718,14 @@ texture = ExtResource("1_aal3b")
 19:22/0 = 0
 20:22/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d6uwb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umb0x"]
 texture = ExtResource("4_2h08i")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_j542c"]
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_33615")
-sources/2 = SubResource("TileSetAtlasSource_d6uwb")
+sources/0 = SubResource("TileSetAtlasSource_82txv")
+sources/2 = SubResource("TileSetAtlasSource_umb0x")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdbxy"]
 size = Vector2(34, 30.75)
@@ -759,6 +759,7 @@ tile_map_data = PackedByteArray("AAAHAA8AAAACABEAAAAHAA4AAAACABAAAAAHAA0AAAACABA
 tile_set = SubResource("TileSet_gdnrn")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 blend_mode = 1
 
 [node name="llave" parent="." instance=ExtResource("2_wyku2")]
