@@ -10,4 +10,4 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	var player = body as Player
 	if player:
-		get_tree().change_scene_to_file("res://ui/win_menu.tscn")
+		get_tree().change_scene_to_file("res://ui/tutorial_complete.tscn")
