@@ -65,7 +65,10 @@ by @pixelahead (on Twitter/X.com)[/font_size]
 from ©️Pngtree (on pngtree.com)[/font_size]
 
 [font_size={30}][u]Font[/u]: Blackcraft
-from © 2023 GGBotNet (on ggbot.net)[/font_size]"
+from © 2023 GGBotNet (on ggbot.net)[/font_size]
+
+[font_size={30}][u]Enemy[/u]: 32 x 32 pixel Dungeon
+tileset characters objects by elKortes (on Itch.io)[/font_size]"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
