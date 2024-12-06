@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqqymt5nn1sxv"
-path="res://.godot/imported/Hearts.png-39f471688574be4e6a6dcadd8cdfecbe.ctex"
+uid="uid://cav0cyyth56fq"
+path="res://.godot/imported/Bowllingguychibi-Walk.png-168629c053ccf80c0f55d7366bfc2262.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/Hearts.png"
-dest_files=["res://.godot/imported/Hearts.png-39f471688574be4e6a6dcadd8cdfecbe.ctex"]
+source_file="res://assets/sprites/enemy/Bowllingguychibi-Walk.png"
+dest_files=["res://.godot/imported/Bowllingguychibi-Walk.png-168629c053ccf80c0f55d7366bfc2262.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bruwarj4054jo"
-path="res://.godot/imported/ColorPalette.png-7fbe5a7ec56509fe813ea06c10642b31.ctex"
+uid="uid://dsjwaf7ve260s"
+path="res://.godot/imported/Bowllingguychibiback-Walk.png-0f3efaa804da925edb43f51262b97375.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/ColorPalette.png"
-dest_files=["res://.godot/imported/ColorPalette.png-7fbe5a7ec56509fe813ea06c10642b31.ctex"]
+source_file="res://assets/sprites/enemy/Bowllingguychibiback-Walk.png"
+dest_files=["res://.godot/imported/Bowllingguychibiback-Walk.png-0f3efaa804da925edb43f51262b97375.ctex"]
 
 [params]
 
