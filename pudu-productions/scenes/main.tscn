@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bvtkul1uujjob"]
+[gd_scene load_steps=18 format=3 uid="uid://bvtkul1uujjob"]
 
 [ext_resource type="PackedScene" uid="uid://dnpqbx8rg2kit" path="res://scenes/bright_room.tscn" id="1_05pd1"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_ichbc"]
@@ -14,6 +14,7 @@
 [ext_resource type="FontFile" uid="uid://cespu3gmo1655" path="res://assets/fonts/Blackcraft.otf" id="12_513gf"]
 [ext_resource type="Script" path="res://scenes/tuto.gd" id="13_a8gcs"]
 [ext_resource type="Theme" uid="uid://do1k4s2uxf1r2" path="res://resources/theme.tres" id="14_w2t6k"]
+[ext_resource type="AudioStream" uid="uid://c1nj2twr77geb" path="res://assets/sounds/Mind's Eye Pack/Pack/6- The Veil of Night.ogg" id="15_1dncn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_meg8n"]
 size = Vector2(108, 24)
@@ -119,3 +120,6 @@ theme_override_font_sizes/font_size = 35
 text = "Presiona WASD para moverte"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_1dncn")

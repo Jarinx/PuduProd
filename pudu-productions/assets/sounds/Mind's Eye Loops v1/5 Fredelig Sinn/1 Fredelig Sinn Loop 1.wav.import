@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d32bet4nuwrix"
+path="res://.godot/imported/1 Fredelig Sinn Loop 1.wav-14b2fd7984643939c0b53bd10d7fd180.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Loops v1/5 Fredelig Sinn/1 Fredelig Sinn Loop 1.wav"
+dest_files=["res://.godot/imported/1 Fredelig Sinn Loop 1.wav-14b2fd7984643939c0b53bd10d7fd180.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

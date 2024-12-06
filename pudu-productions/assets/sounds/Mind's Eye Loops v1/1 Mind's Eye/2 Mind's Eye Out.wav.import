@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ioh812u3gkbf"
+path="res://.godot/imported/2 Mind's Eye Out.wav-a1439436524844730ff54ef65c7a7b7e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Loops v1/1 Mind's Eye/2 Mind's Eye Out.wav"
+dest_files=["res://.godot/imported/2 Mind's Eye Out.wav-a1439436524844730ff54ef65c7a7b7e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

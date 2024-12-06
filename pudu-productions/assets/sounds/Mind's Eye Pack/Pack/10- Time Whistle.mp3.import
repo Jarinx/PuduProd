@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7m4t2o5e7bie"
+path="res://.godot/imported/10- Time Whistle.mp3-cbc50c6ac9b5c75dc14d2d51aaf8f219.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Pack/Pack/10- Time Whistle.mp3"
+dest_files=["res://.godot/imported/10- Time Whistle.mp3-cbc50c6ac9b5c75dc14d2d51aaf8f219.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
