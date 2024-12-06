@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cme56luutui5n"
+path="res://.godot/imported/615529__crash_358__sci-fi-ui-button-sound-008.wav-db90a508691d85689463d1d2c0913830.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Mind's Eye Pack/615529__crash_358__sci-fi-ui-button-sound-008.wav"
+dest_files=["res://.godot/imported/615529__crash_358__sci-fi-ui-button-sound-008.wav-db90a508691d85689463d1d2c0913830.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

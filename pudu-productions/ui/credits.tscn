@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b43ei3inldftv"]
+[gd_scene load_steps=6 format=3 uid="uid://b43ei3inldftv"]
 
 [ext_resource type="Script" path="res://ui/credits.gd" id="1_uq4ve"]
 [ext_resource type="Texture2D" uid="uid://fltsy1msqgrg" path="res://assets/images/back.jpg" id="2_nk8yh"]
 [ext_resource type="Theme" uid="uid://do1k4s2uxf1r2" path="res://resources/theme.tres" id="3_5a3oj"]
+[ext_resource type="AudioStream" uid="uid://cme56luutui5n" path="res://assets/sounds/Mind's Eye Pack/615529__crash_358__sci-fi-ui-button-sound-008.wav" id="4_0gksn"]
 [ext_resource type="AudioStream" uid="uid://l7oggjfq7i4u" path="res://assets/sounds/Mind's Eye Pack/Pack/8- Quiet.mp3" id="4_6gie5"]
 
 [node name="Credits" type="Control"]
@@ -73,6 +74,9 @@ metadata/_edit_group_ = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Return to Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer2/Back"]
+stream = ExtResource("4_0gksn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_6gie5")

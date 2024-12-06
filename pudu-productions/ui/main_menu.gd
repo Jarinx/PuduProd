@@ -13,14 +13,14 @@ func _ready() -> void:
 	$AudioStreamPlayer2D.play()
 func _on_start_pressed () -> void:
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
-	
+	$AudioStreamPlayer2D.play()
 
 func _on_credits_pressed () -> void:
 	get_tree().change_scene_to_file("res://ui/credits.tscn")
-
+	$AudioStreamPlayer2D.play()
 func _on_quit_pressed () -> void:
 	get_tree().quit()
-	
+	$AudioStreamPlayer2D.play()
 	
 
 
