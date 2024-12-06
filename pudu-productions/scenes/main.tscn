@@ -37,6 +37,7 @@ position = Vector2(239, 174)
 position = Vector2(574, 243)
 
 [node name="Pause" parent="." instance=ExtResource("4_viqxd")]
+layer = 2
 
 [node name="Enemy" parent="." instance=ExtResource("5_ofb2j")]
 position = Vector2(342, 226)
