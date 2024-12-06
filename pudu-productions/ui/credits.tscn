@@ -52,7 +52,10 @@ text = "[font_size={30}][u]Room's assets[/u]: Victorian Interior Asset Pack by n
 Daniel Ávila
 Esperanza Cares
 Julieta Ayeli
-Pamela Mendoza [/font_size]"
+Pamela Mendoza [/font_size]
+
+
+[font_size={30}][u]Music[/u]: Ambient Horror Indie Game Music by Crow Shade (on itch.io)[/font_size]"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -77,6 +80,7 @@ text = "Return to Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer2/Back"]
 stream = ExtResource("4_0gksn")
+volume_db = 8.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_6gie5")
