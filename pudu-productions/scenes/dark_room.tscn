@@ -759,7 +759,6 @@ tile_map_data = PackedByteArray("AAAHAA8AAAACABEAAAAHAA4AAAACABAAAAAHAA0AAAACABA
 tile_set = SubResource("TileSet_gdnrn")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 blend_mode = 1
 
 [node name="llave" parent="." instance=ExtResource("2_wyku2")]

@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://da3wxq06q1cp5"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://da3wxq06q1cp5"]
 
 [ext_resource type="Texture2D" uid="uid://cigpxyr0ublwa" path="res://assets/Victorian Interior/16x16/16x16-ALL-ASSETS.png" id="1_hjnvi"]
+[ext_resource type="Texture2D" uid="uid://jfs43jbet0l2" path="res://assets/Key Items 16x16/03.png" id="2_ppe76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2o8e6"]
 texture = ExtResource("1_hjnvi")
@@ -488,6 +489,11 @@ texture = ExtResource("1_hjnvi")
 19:22/0 = 0
 20:22/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndj6j"]
+texture = ExtResource("2_ppe76")
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_2o8e6")
+sources/1 = SubResource("TileSetAtlasSource_ndj6j")

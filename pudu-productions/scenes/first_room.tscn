@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://d0uqgttxhetql"]
+[gd_scene load_steps=8 format=4 uid="uid://d0uqgttxhetql"]
 
 [ext_resource type="Texture2D" uid="uid://cigpxyr0ublwa" path="res://assets/Victorian Interior/16x16/16x16-ALL-ASSETS.png" id="1_j74vm"]
+[ext_resource type="Texture2D" uid="uid://bnu6000ifsw2m" path="res://assets/Victorian Interior/16x16/16x16-TEXTURES - copia.png" id="2_ipl8a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wwox"]
 texture = ExtResource("1_j74vm")
@@ -689,3 +690,23 @@ collision_mask = 64
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(88, 112.25)
 shape = SubResource("RectangleShape2D_eofgw")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(34, 26)
+energy = 3.9
+texture = ExtResource("2_ipl8a")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(120, 25)
+energy = 3.74
+texture = ExtResource("2_ipl8a")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(23, 215)
+energy = 3.74
+texture = ExtResource("2_ipl8a")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(158, 158)
+energy = 5.11
+texture = ExtResource("2_ipl8a")
