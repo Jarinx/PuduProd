@@ -1,19 +1,69 @@
-[gd_scene load_steps=9 format=3 uid="uid://ewuujbo4fhcv"]
+[gd_scene load_steps=15 format=3 uid="uid://ewuujbo4fhcv"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_tscdc"]
+[ext_resource type="Texture2D" uid="uid://cmy6auv5ew882" path="res://assets/sprites/enemy/Bowllingguychibi-Idle.png" id="2_mpem3"]
 [ext_resource type="Script" path="res://Components/hurtbox.gd" id="2_nmgc5"]
-[ext_resource type="Texture2D" uid="uid://ci2si8hto8quj" path="res://assets/32x32 Pixel Dungeon Download/Character_sheet.png" id="2_p2ahv"]
 [ext_resource type="Script" path="res://Components/hitbox.gd" id="4_06py3"]
 [ext_resource type="AudioStream" uid="uid://dsrt18yc7vl73" path="res://assets/sounds/Monsters & Ghosts/Ghost_scream_3.wav" id="5_0o0wl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkyik"]
-size = Vector2(73, 60)
+size = Vector2(67, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ilpe"]
-size = Vector2(37, 35.25)
+size = Vector2(40, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2utrq"]
-size = Vector2(35, 35)
+size = Vector2(40, 52)
+
+[sub_resource type="Animation" id="Animation_my44s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1q4if"]
+resource_name = "idle"
+length = 2.4
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwcn7"]
+_data = {
+"RESET": SubResource("Animation_my44s"),
+"idle": SubResource("Animation_1q4if")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8pjfv"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r11y4"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lvpon"]
+states/idle/node = SubResource("AnimationNodeAnimation_8pjfv")
+states/idle/position = Vector2(404, 94)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_r11y4")]
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 3
@@ -21,12 +71,10 @@ collision_mask = 3
 script = ExtResource("1_tscdc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -2)
-scale = Vector2(0.875, 0.8125)
-texture = ExtResource("2_p2ahv")
+position = Vector2(7.5, 10.284)
+scale = Vector2(1.23438, 1.08487)
+texture = ExtResource("2_mpem3")
 hframes = 8
-vframes = 8
-frame = 24
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 8
@@ -34,7 +82,7 @@ collision_mask = 8
 script = ExtResource("2_nmgc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(1.5, -1)
+position = Vector2(7.5, 11.5)
 shape = SubResource("RectangleShape2D_vkyik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -45,6 +93,7 @@ shape = SubResource("RectangleShape2D_0ilpe")
 autostart = true
 
 [node name="Hitbox" type="Area2D" parent="."]
+position = Vector2(-2, 0)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("4_06py3")
@@ -54,5 +103,15 @@ position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2utrq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(8, 12)
 stream = ExtResource("5_0o0wl")
 volume_db = -2.971
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xwcn7")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_lvpon")
+anim_player = NodePath("../AnimationPlayer")

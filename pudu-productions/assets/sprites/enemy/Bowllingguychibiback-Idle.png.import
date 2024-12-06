@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://becxhl6e1ayxl"
-path="res://.godot/imported/SpriteSheetColumns.png-14617d8852cb33973b47f074b7f520c9.ctex"
+uid="uid://xslec0h7x0ai"
+path="res://.godot/imported/Bowllingguychibiback-Idle.png-0862a5f5c905ffad30074fdcde96b751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheetColumns.png"
-dest_files=["res://.godot/imported/SpriteSheetColumns.png-14617d8852cb33973b47f074b7f520c9.ctex"]
+source_file="res://assets/sprites/enemy/Bowllingguychibiback-Idle.png"
+dest_files=["res://.godot/imported/Bowllingguychibiback-Idle.png-0862a5f5c905ffad30074fdcde96b751.ctex"]
 
 [params]
 
