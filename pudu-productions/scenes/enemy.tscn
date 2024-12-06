@@ -71,7 +71,7 @@ collision_mask = 3
 script = ExtResource("1_tscdc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7.5, 10.284)
+position = Vector2(10, 10)
 scale = Vector2(1.23438, 1.08487)
 texture = ExtResource("2_mpem3")
 hframes = 8
@@ -86,7 +86,7 @@ position = Vector2(7.5, 11.5)
 shape = SubResource("RectangleShape2D_vkyik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -1.625)
+position = Vector2(7, 12)
 shape = SubResource("RectangleShape2D_0ilpe")
 
 [node name="FollowTime" type="Timer" parent="."]
@@ -99,7 +99,7 @@ collision_mask = 4
 script = ExtResource("4_06py3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(0, -2)
+position = Vector2(9, 11)
 shape = SubResource("RectangleShape2D_2utrq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
